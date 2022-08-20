@@ -98,3 +98,11 @@ INSERT INTO pedidos VALUES (88888, 'ABC123Z', '2022-08-08', 'TARJETA', 'NO');
 INSERT INTO pedidos VALUES (77777, 'ABC123Z', '2022-08-08', 'BARRANI', 'SI');
 INSERT INTO pedidos VALUES (66666, 'ABC123Z', '2022-08-08', '', 'SI');
 SELECT * FROM pedidos;*/
+
+ #<-------------Etapa 2.8------------->
+/*8. Importar el archivo CSV: PRODUCTOS a la base de datos LABORATORIO. Y tener en 
+cuenta las siguientes indicaciones:
+a. Este archivo lo encontrarás disponible en  el área de descargas del presente módulo.
+b. No cambiar el nombre de la tabla.
+c. Mantener los tipos de datos asignados al momento de la importación.*/
+DESC productos;
