@@ -35,3 +35,11 @@ CONTACTOS.*/
 RENAME TABLE clientes TO contactos;
 SHOW TABLES;
 
+#<-------------Etapa 2.4------------->
+/*4. Importar el archivo CSV con el nombre CLIENTES a la base de 
+datos LABORATORIOTEST. Y tener en cuenta las siguientes indicaciones:
+a. Este archivo lo encontrarás disponible en el área de descargas del presente módulo.
+b. No cambiar el nombre de la tabla.
+c. Mantener los tipos de datos asignados al momento de la importación*/
+DESC clientes;
+
