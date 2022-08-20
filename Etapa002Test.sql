@@ -71,3 +71,30 @@ b. No cambiar el nombre de la tabla.
 c. Mantener los tipos de datos asignados al momento de la importación.*/
 DESC pedidos;
 
+#<-------------Etapa 2.7------------->
+/*7. Llevar a cabo los siguientes cambios en la tabla PEDIDOS importada anteriormente. 
+Respetar las consignas detalladas a continuación y utilizar el comando ALTER TABLE:
+a. Campo Numero_Pedido: debe ser de tipo INT, sólo debe aceptar valores numéricos 
+positivos y debe ser el campo PRIMARY KEY de la tabla.
+b. Campo Codigo_Cliente: debe ser de tipo VARCHAR, debe admitir hasta 7 caracteres 
+como máximo y no puede quedar vacío.
+c. Campo Fecha_Pedido: debe ser de tipo DATE y su carga es obligatoria.
+d. Campo Forma_Pago: sólo debe admitir la carga de los valores APLAZADO, CONTADO o TARJETA.
+e. Campo Enviado: sólo debe admitir la carga de los valores SI o NO.*/
+ALTER TABLE pedidos
+	MODIFY numero_pedido INT UNSIGNED PRIMARY KEY,
+    MODIFY codigo_cliente VARCHAR(7) NOT NULL,
+    MODIFY fecha_pedido DATE NOT NULL,
+    MODIFY forma_pago ENUM('APLAZADO', 'CONTADO', 'TARJETA'),
+    MODIFY enviado ENUM('SI','NO');
+DESC PEDIDOS;
+    
+#Pruebas
+/*ALTER TABLE pedidos MODIFY forma_pago ENUM('APLAZADO', 'CONTADO', 'TARJETA') NOT NULL;
+ALTER TABLE pedidos MODIFY forma_pago ENUM('APLAZADO', 'CONTADO', 'TARJETA');
+DESC pedidos;
+INSERT INTO pedidos VALUES (99999, 'ABC123Z', '2022-08-08', 'BARRANI', 'SI');
+INSERT INTO pedidos VALUES (88888, 'ABC123Z', '2022-08-08', 'TARJETA', 'NO');
+INSERT INTO pedidos VALUES (77777, 'ABC123Z', '2022-08-08', 'BARRANI', 'SI');
+INSERT INTO pedidos VALUES (66666, 'ABC123Z', '2022-08-08', '', 'SI');
+SELECT * FROM pedidos;*/
