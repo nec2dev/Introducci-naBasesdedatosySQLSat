@@ -29,3 +29,9 @@ ALTER TABLE clientes_neptuno
     MODIFY Pais VARCHAR(15) NOT NULL;
 DESC clientes_neptuno;
 
+#<-------------Etapa 2.3------------->
+/*3. Cambiar el nombre de la tabla CLIENTES por 
+CONTACTOS.*/
+RENAME TABLE clientes TO contactos;
+SHOW TABLES;
+
