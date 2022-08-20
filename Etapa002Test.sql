@@ -43,3 +43,22 @@ b. No cambiar el nombre de la tabla.
 c. Mantener los tipos de datos asignados al momento de la importación*/
 DESC clientes;
 
+#<-------------Etapa 2.5------------->
+/*5. Llevar a cabo los siguientes cambios en la  tabla CLIENTES importada anteriormente. 
+Respetar las consignas detalladas a continuación y utiliza el comando ALTER TABLE:
+a. Campo Cod_Cliente: debe ser de tipo VARCHAR, debe admitir hasta 7 caracteres como 
+máximo y debe ser el campo PRIMARY KEY de la tabla.
+b. Campo Empresa: debe ser de tipo VARCHAR, debe admitir hasta 100 caracteres como máximo 
+y no puede quedar vacío.
+c. Campo Ciudad: debe ser de tipo VARCHAR, debe admitir hasta 25 caracteres como máximo y 
+no puede quedar vacío.
+d. Campo Telefono: debe ser de tipo INT y no debe admitir valores numéricos negativos.
+e. Campo Responsable: debe ser de tipo VARCHAR y debe admitir como máximo hasta 30 caracteres*/
+ALTER TABLE clientes
+	MODIFY Cod_Cliente VARCHAR(7) PRIMARY KEY,
+    MODIFY empresa VARCHAR(100) NOT NULL,
+    MODIFY ciudad VARCHAR(25) NOT NULL,
+    MODIFY telefono INT UNSIGNED,
+    MODIFY responsable VARCHAR(30);
+DESC clientes;
+
