@@ -62,3 +62,12 @@ ALTER TABLE clientes
     MODIFY responsable VARCHAR(30);
 DESC clientes;
 
+#<-------------Etapa 2.6------------->
+/*6. Importar el archivo CSV con el nombre 
+PEDIDOS a la base de datos LABORATORIO. 
+Y tener en cuenta las siguientes indicaciones:
+a. Este archivo lo encontrarás disponible en el área de descargas del presente módulo.
+b. No cambiar el nombre de la tabla.
+c. Mantener los tipos de datos asignados al momento de la importación.*/
+DESC pedidos;
+
